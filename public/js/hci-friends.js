@@ -4,39 +4,46 @@
 $(document).ready(function() {
 	initializePage();
 })
+function projectClick(e){
+	e.preventDefault();
+	var x = $(this).text();
+	console.log(x);
+$(this).text(anagrammedName(x.trim()));
+}
 
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$("a.names").click(projectClick);
 }
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
 
-	if (name == "Doug Engelbart") {
+	if (name === "Doug Engelbart") {
 		return "Notable Grudge";
 	}
-	else if (name == "Ivan Sutherland") {
+	else if (name === "Ivan Sutherland") {
 		return "Vandal Heist Run";
 	}
-	else if (name == "JCR Licklider") {
+	else if (name === "JCR Licklider") {
 		return "Crick Rid Jell";
 	}
-	else if (name == "Vannevar Bush") {
+	else if (name === "Vannevar Bush") {
 		return "Ravens Van Hub";
 	}
-	else if (name == "Alan C. Kay") {
+	else if (name === "Alan C. Kay") {
 		return "Canal Yak";
 	}
-	else if (name == "Allen Newell") {
+	else if (name === "Allen Newell") {
 		return "Ellen All New";
 	}
-	else if (name == "Lucy Suchman") {
+	else if (name === "Lucy Suchman") {
 		return "Lunacy Chums";
 	}
-	else if (name == "Grace Hopper") {
+	else if (name === "Grace Hopper") {
 		return "Gear Chopper";
 	}
 	else {
